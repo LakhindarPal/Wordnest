@@ -1,0 +1,121 @@
+:root {
+  --bg-color: #f5f5f5;
+  --text-color: #1a1a1a;
+  --theme-color: #4285f4;
+  --primary-color: #000000;
+  --border-color: #cccccc;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #1a1a1a;
+    --text-color: #f0f0f0;
+    --theme-color: #1e3a8a;
+    --primary-color: #ffffff;
+    --border-color: #333333;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  font-size: 16pt;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  text-align: center;
+  margin: 0;
+}
+
+header,
+footer {
+  background-color: var(--theme-color);
+  color: #ffffff;
+  position: sticky;
+  z-index: 2;
+}
+
+header {
+  top: 0;
+  padding-bottom: 1rem;
+}
+
+header div,
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+}
+
+input,
+button {
+  font-size: inherit;
+  padding: 0.5rem 0.8rem;
+  background: transparent;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  color: #ffffff;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ffffff;
+  color: var(--theme-color);
+}
+
+::placeholder,
+footer a {
+  color: #ffffff;
+}
+
+main {
+  padding: 1.5rem;
+  border-radius: 0.6rem;
+}
+
+h2,
+h3 span {
+  color: var(--theme-color);
+}
+
+section {
+  border-bottom: 1px solid var(--border-color);
+}
+
+article {
+  border: 1px solid var(--theme-color);
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+}
+
+audio {
+  width: 90%;
+  border: 1px solid var(--border-color);
+  border-radius: 0.6rem;
+  margin: 1rem;
+}
+
+ul {
+  list-style: none;
+  text-align: left;
+  padding: 1rem;
+}
+
+li {
+  border: 1px solid var(--border-color);
+  border-radius: 0.8rem;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+footer {
+  bottom: 0;
+}
+
+footer p {
+  font-size: small;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Wordnest</title>
+  <meta name="description" content="Explore definitions, synonyms, antonyms, and phonetics of words with our comprehensive dictionary app. Enter a word to discover its meaning, pronunciation, and usage examples. Improve your vocabulary and language skills effortlessly.">
+  <meta name="author" content="Lakhindar Pal">
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+
+  <link rel="icon" type="image/png" sizes="512x512" href="icons/android-icon-512x512.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/android-icon-192x192.png">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Wordnest">
+  <meta name="twitter:description" content="Explore definitions, synonyms, antonyms, and phonetics of words with our comprehensive dictionary app. Enter a word to discover its meaning, pronunciation, and usage examples. Improve your vocabulary and language skills effortlessly.">
+  <meta name="twitter:image" content="icons/wide-image-1200x630.webp">
+  <meta property="twitter:url" content="https://wordnest.glitch.me/">
+
+  <meta property="og:title" content="Wordnest">
+  <meta property="og:description" content="Explore definitions, synonyms, antonyms, and phonetics of words with our comprehensive dictionary app. Enter a word to discover its meaning, pronunciation, and usage examples. Improve your vocabulary and language skills effortlessly.">
+  <meta property="og:image" content="icons/wide-image-1200x630.webp">
+  <meta property="og:url" content="https://wordnest.glitch.me/">
+
+  <meta name="theme-color" content="#4285f4">
+  <link rel="manifest" href="pwa/manifest.json">
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker
+        .register("pwa/sw.js")
+        .then((reg) => console.log("Service Worker registered", reg))
+        .catch((err) =>
+          console.error("Service Worker **not** registered", err)
+        );
+    } else {
+      console.warn("Service Worker not supported in this browser");
+    }
+  </script>
+  <script defer src="main.js"></script>
+</head>
+
+<body>
+  <header>
+    <div>
+      <img src="icons/android-icon-512x512.png" alt="Site logo" height="36" width="36">
+      <h1>Wordnest</h1>
+    </div>
+    <div>
+      <input type="text" name="input" placeholder="Enter a word">
+      <button>Search</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- content will be populated dynamically -->
+  </main>
+
+  <footer>
+    <p>
+      <span>Made with ❤️ by</span>
+      <a href="https://github.com/LakhindarPal" target="_blank" rel="noopener noreferrer">Lakhindar</a>.
+    </p>
+    <p>
+      <span>Powered by</span>
+      <a href="https://dictionaryapi.dev/" target="_blank" rel="noopener noreferrer">DictionaryApi</a>.
+    </p>
+  </footer>
+</body>
+
+</html>
