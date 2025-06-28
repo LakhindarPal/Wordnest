@@ -1,80 +1,76 @@
-# Wordnest
+# WordNest - Your Ultimate Dictionary & Thesaurus 📚
 
-Explore definitions, synonyms, antonyms, and phonetics of words with our comprehensive dictionary app. Enter a word to discover its meaning, pronunciation, and usage examples. Improve your vocabulary and language skills effortlessly.
+WordNest is a modern, intuitive, and feature-rich online dictionary and thesaurus web application. It allows users to quickly search for word definitions, view phonetics, listen to pronunciations, explore synonyms, and see example sentences.
 
-![Wordnest Logo](icons/android-icon-512x512.png)
+## Table of contents
 
-## Features
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Preview](#preview)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-- Search for word definitions
-- View synonyms and antonyms for words
-- Listen to pronunciation with phonetic audio
-- Access usage examples for better understanding
-- Auto dark mode for better viewing experience.
+## Overview
 
-## Demo
+### The Challenge
 
-You can find a live demo of the app [here](https://wordnest.glitch.me/).
+Users should be able to:
 
-## Usage
+- Search for any word and see its definition, phonetics, and part of speech.
+- Play audio for the word's pronunciation.
+- View synonyms and click on them to search for that word.
+- See example sentences for definitions.
+- Switch between light and dark themes.
+- Change the font style (Sans Serif, Serif, Monospace).
+- Be informed when a word cannot be found.
+- View the source URL of the definition.
+- Have a responsive layout for optimal viewing across various screen sizes.
 
-### Search for Word Definitions
+### Preview
 
-To search for the definition of a word, simply type the word into the search input field and click the "Search" button. The app will retrieve the definition, synonyms, antonyms, phonetics, and usage examples for the entered word.
+![screenshot](/previews/mobile_dark.jpg)
 
-### View Synonyms and Antonyms
+#### Live Site URL:
 
-After searching for a word, you can find its synonyms and antonyms listed in the results. This helps you to understand the word's context and use it effectively in your writing or conversation.
+**[https://wordnest.glitch.me/](https://wordnest.glitch.me/)**
 
-### Listen to Pronunciation
+## My process
 
-For words with available phonetic information, you can listen to the pronunciation by clicking on the audio icon next to the phonetic representation. This feature helps you to learn correct pronunciation and improve your speaking skills.
+### Built with
 
-### Access Usage Examples
+- **HTML5:** Semantic markup for structure.
+- **CSS3:** Styling, including CSS Custom Properties (variables) for theme management.
+- **JavaScript (ES6+):** For DOM manipulation, API calls, and interactive features.
+- **Dictionary API:** [https://api.dictionaryapi.dev/](https://api.dictionaryapi.dev/) for word data.
+- Google Fonts: For custom font options.
 
-The app provides usage examples for each definition of the word. These examples demonstrate how the word is used in context, helping you to understand its meaning and usage in different contexts.
+### Continued development
 
-### Explore Word Details
+In future iterations, I plan to:
 
-Each word search result is presented in a user-friendly format, making it easy to explore and understand. The app organizes the information neatly, allowing you to quickly find the details you need.
+- Implement a more robust error handling for network issues or API rate limits.
+- Explore more advanced animations for theme transitions.
+- Consider a small database to cache frequently searched words for faster retrieval.
+- Add a "History" feature to view recently searched words.
+- Integrate a word-of-the-day feature.
 
-Feel free to explore and use the app to enhance your vocabulary and language skills!
+### Useful resources
 
-## Technologies Used
+- **MDN Web Docs:** Invaluable resource for HTML, CSS, and JavaScript.
+- **CSS-Tricks:** Great articles on CSS custom properties and theming.
+- **Dictionary API Docs:** Official documentation for the API used.
 
-- HTML5
-- CSS3
-- JavaScript
-- Fetch API
-- Service Worker (for PWA support)
+## Author
 
-## Installation
+- Website - [https://lakhindar.is-a.dev](https://lakhindar.is-a.dev)
+- LinkedIn - [@LakhindarPal](https://www.linkedin.com/in/LakhindarPal)
 
-To run the app locally, follow these steps:
+## Acknowledgments
 
-1. Clone the repository:
+- Special thanks to the creators of the Dictionary API for providing such a comprehensive and free resource.
 
-   ```bash
-   git clone https://github.com/LakhindarPal/Wordnest.git
-   ```
-
-2. Navigate to the project directory:
-
-   ```bash
-   cd wordnest
-   ```
-
-3. Open `index.html` in your web browser.
-
-## Credits
-
-- This project is powered by [DictionaryApi](https://dictionaryapi.dev).
-- The logo is generated using [Craiyon Ai](https://www.craiyon.com/)
-
-## Contributing
-
-Contributions are welcome! Please feel free to open issues or submit pull requests with improvements, bug fixes, or new features.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+- This project was inspired by a [Frontend Mentor challenge](https://www.frontendmentor.io/challenges/dictionary-web-app-h5wwnyuKFL). While I didn't have access to the official starter assets for the premium challenge, I was able to create this solution using only the provided preview thumbnail as a guide.

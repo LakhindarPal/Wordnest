@@ -1,79 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Wordnest</title>
-  <meta name="description" content="Explore definitions, synonyms, antonyms, and phonetics of words with our comprehensive dictionary app. Enter a word to discover its meaning, pronunciation, and usage examples. Improve your vocabulary and language skills effortlessly.">
-  <meta name="author" content="Lakhindar Pal">
-  <link rel="stylesheet" href="styles.css">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-
-  <link rel="icon" type="image/png" sizes="512x512" href="icons/android-icon-512x512.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="icons/android-icon-192x192.png">
-
-  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Wordnest">
-  <meta name="twitter:description" content="Explore definitions, synonyms, antonyms, and phonetics of words with our comprehensive dictionary app. Enter a word to discover its meaning, pronunciation, and usage examples. Improve your vocabulary and language skills effortlessly.">
-  <meta name="twitter:image" content="icons/wide-image-1200x630.webp">
-  <meta property="twitter:url" content="https://wordnest.glitch.me/">
-
-  <meta property="og:title" content="Wordnest">
-  <meta property="og:description" content="Explore definitions, synonyms, antonyms, and phonetics of words with our comprehensive dictionary app. Enter a word to discover its meaning, pronunciation, and usage examples. Improve your vocabulary and language skills effortlessly.">
-  <meta property="og:image" content="icons/wide-image-1200x630.webp">
+  <title>WordNest - Your Ultimate Dictionary & Thesaurus</title>
+  <meta name="description" content="WordNest is a free, fast, and comprehensive online dictionary and thesaurus. Find word definitions, pronunciations, synonyms, antonyms, and example sentences instantly.">
+  <meta name="keywords" content="dictionary, thesaurus, online dictionary, word definitions, word meanings, pronunciation, synonyms, antonyms, vocabulary, learn English, English words, free dictionary, WordNest">
+  <meta property="og:type" content="website">
   <meta property="og:url" content="https://wordnest.glitch.me/">
-
-  <meta name="theme-color" content="#4285f4">
-  <link rel="manifest" href="pwa/manifest.json">
-
-  <script>
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker
-        .register("pwa/sw.js")
-        .then((reg) => console.log("Service Worker registered", reg))
-        .catch((err) =>
-          console.error("Service Worker **not** registered", err)
-        );
-    } else {
-      console.warn("Service Worker not supported in this browser");
-    }
-  </script>
-  <script defer src="main.js"></script>
+  <meta property="og:title" content="WordNest - Your Ultimate Dictionary & Thesaurus">
+  <meta property="og:description" content="WordNest is a free, fast, and comprehensive online dictionary and thesaurus. Find word definitions, pronunciations, synonyms, antonyms, and example sentences instantly.">
+  <meta property="og:image" content="/assets/preview.jpg">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://wordnest.glitch.me/">
+  <meta property="twitter:title" content="WordNest - Your Ultimate Dictionary & Thesaurus">
+  <meta property="twitter:description" content="WordNest is a free, fast, and comprehensive online dictionary and thesaurus. Find word definitions, pronunciations, synonyms, antonyms, and example sentences instantly.">
+  <meta property="twitter:image" content="/assets/preview.jpg">
+  <link rel="canonical" href="https://wordnest.glitch.me/">
+  <link rel="icon" type="image/svg+xml" sizes="32x32" href="/assets/logo.svg">
+  <meta name="theme-color" content="#A445ED">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Nunito:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script src="main.js" defer></script>
 </head>
 
-<body>
+<body data-font="sans-serif">
   <header>
-    <div>
-      <img src="icons/android-icon-512x512.png" alt="Site logo" height="36" width="36">
-      <h1>Wordnest</h1>
-    </div>
-    <div>
-      <input type="text" name="input" placeholder="Enter a word">
-      <button>Search</button>
+    <div class="container header-content">
+      <img src="assets/logo.svg" alt="Dictionary Logo" class="logo">
+      <div class="theme-font-switcher">
+        <div class="font-switcher">
+          <select id="font-select">
+            <option value="sans-serif">Sans Serif</option>
+            <option value="serif">Serif</option>
+            <option value="monospace">Monospace</option>
+          </select>
+          <img src="assets/icon-arrow-down.svg" alt="Arrow down" class="arrow-down-icon">
+        </div>
+        <div class="theme-switcher">
+          <img src="assets/icon-sun.svg" alt="Sun icon" class="theme-icon">
+          <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider round"></span>
+          </label>
+          <img src="assets/icon-moon.svg" alt="Moon icon" class="theme-icon">
+        </div>
+      </div>
     </div>
   </header>
-
+  
   <main>
-    <!-- content will be populated dynamically -->
+    <div class="container">
+      <form id="search-form">
+        <div class="search-input-wrapper">
+          <input type="text" id="search-input" placeholder="Search for any word..." required>
+          <button type="submit" aria-label="Search">
+            <img src="assets/icon-search.svg" alt="Search icon">
+          </button>
+        </div>
+      </form>
+      
+      <div id="word-display" class="word-display">
+      </div>
+    </div>
   </main>
-
-  <footer>
-    <p>
-      <span>Made with ❤️ by</span>
-      <a href="https://github.com/LakhindarPal" target="_blank" rel="noopener noreferrer">Lakhindar</a>.
-    </p>
-    <p>
-      <span>Powered by</span>
-      <a href="https://dictionaryapi.dev/" target="_blank" rel="noopener noreferrer">DictionaryApi</a>.
-    </p>
-  </footer>
+  
 </body>
 
 </html>
